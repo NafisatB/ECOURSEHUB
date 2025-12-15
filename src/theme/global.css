@@ -1,0 +1,11 @@
+@import url(variables.css);
+@import url(normalize.css);
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+}
