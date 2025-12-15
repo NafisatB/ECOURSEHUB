@@ -30,7 +30,6 @@
 .header .banner .banner__contact{
     display: flex;
     align-items: center;
-    /* width: 984px; */
 }
 
 .banner__contact .banner__contact-item{
@@ -54,3 +53,52 @@
 .banner__contact .banner__contact-item:last-child{
     border: none;
 }
+
+.header .navigation{
+    display: grid;
+    grid-template-columns: 220px 1fr 223px;
+    padding: 0 var(--default-padding-right) 0 var(--default-padding-left); 
+    height: calc(132px - 50px);
+    justify-content: center;
+    align-items: center;
+}
+
+.header .navigation_logo{
+    width: 220px;
+    height: 54px;
+}
+
+.header .navigation menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.navigation menu li{
+     font-family: Sora;
+    font-weight: 400px;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 17px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    transform: capitalize;
+    cursor: pointer;
+    height: 31px;
+}
+
+.navigation menu li a{
+    text-decoration: none;
+    color: var(--crow-black-blue);
+    padding: 5px 17px;
+    border: 1px solid transparent;
+
+}
+
+.navigation menu li:hover a{
+    color: var(--candy-grape-fizz);
+    border: 1px solid var(--candy-grape-fizz);
+    border-radius: 100px;
+}
+
