@@ -48,8 +48,6 @@
     gap: 12px;
 }
 
-
-
 .banner__contact .banner__contact-item:last-child{
     border: none;
 }
@@ -102,3 +100,9 @@
     border-radius: 100px;
 }
 
+/* .header__button{
+    height: 58.5px;
+    width: 223.3px;
+    border: 2px solid red;
+    border-radius: 200px;
+} */
