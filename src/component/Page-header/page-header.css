@@ -1,108 +1,141 @@
-.header .banner{
+
+   /* HEADER BANNER */
+
+
+.header .banner {
     background-color: var(--primary);
-    height: 50px;
-    color: white; 
+    height: 3.125rem;
+    color: #fff;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
-    justify-content: space-between; 
-    padding: 0 var(--default-padding-right) 0 var(--default-padding-left); 
+    justify-content: space-between;
+    padding-inline: clamp(1rem, 4vw, 3rem);
+
+    max-width: 1440px;
+    margin-inline: auto;
 }
 
-.header .banner .banner_social{
+
+/* Social icons */
+.header .banner .banner_social {
     background-color: var(--radler);
+    list-style: none;
     width: 183px;
-    list-style-type: none;
+    height: 50px;
     display: flex;
-    gap: 20px;
-    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+
+    padding-inline: 1rem;
+    
 }
 
-.header .banner .banner_social li{
+.header .banner .banner_social li {
     display: flex;
     align-items: center;
     cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
-.header .banner .banner_social li:hover{
-    transform: scale(1.3);
+.header .banner .banner_social li:hover {
+    transform: scale(1.15);
 }
 
-.header .banner .banner__contact{
+.header .banner .banner__contact {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    flex-shrink: 1;
 }
 
-.banner__contact .banner__contact-item{
-    padding: 0 19px;
-    border-right: 1px solid #FFFFFF36;
-    font-family: Sora;
-    font-weight: 400px;
-    font-style: normal;
-    font-size: 17px;
-    line-height: 17px;
-    letter-spacing: 0%;
-    vertical-align: middle;
-    color: #FFFFFF;
+.banner__contact .banner__contact-item {
+    padding-inline: 1.25rem;
+    border-right: 1px solid #ffffff36;
+    font-family: "Sora", sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    color: #fff;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 0.75rem;
 }
 
-.banner__contact .banner__contact-item:last-child{
-    border: none;
+.banner__contact .banner__contact-item:last-child {
+    border-right: none;
 }
 
-.header .navigation{
+
+   /* NAVIGATION BAR */
+
+
+.header .navigation {
     display: grid;
-    grid-template-columns: 220px 1fr 223px;
-    padding: 0 var(--default-padding-right) 0 var(--default-padding-left); 
-    height: calc(132px - 50px);
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    min-height: 5.125rem; 
+    padding-inline: clamp(1rem, 4vw, 3rem);
+    max-width: 1440px;
+    margin-inline: auto;
+}
+
+.header .navigation_logo {
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+}
+
+.header .navigation menu {
+    display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.header .navigation_logo{
-    width: 220px;
-    height: 54px;
-}
-
-.header .navigation menu{
-    display: flex;
     list-style: none;
-    gap: 20px;
-    padding-top: 10px;
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+    padding: 0;
+    margin: 0;
 }
 
-.navigation menu li{
-     font-family: Sora;
-    font-weight: 400px;
-    font-style: normal;
-    font-size: 17px;
-    line-height: 17px;
-    letter-spacing: 0%;
-    vertical-align: middle;
-    transform: capitalize;
+.navigation menu li {
+    font-family: "Sora", sans-serif;
+    font-size: 1rem;
     cursor: pointer;
-    height: 31px;
 }
 
-.navigation menu li a{
+
+.navigation menu li a {
     text-decoration: none;
     color: var(--crow-black-blue);
-    padding: 5px 17px;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
     border: 1px solid transparent;
-
+    transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.navigation menu li:hover a{
+.navigation menu li:hover a {
     color: var(--candy-grape-fizz);
-    border: 1px solid var(--candy-grape-fizz);
-    border-radius: 100px;
+    border-color: var(--candy-grape-fizz);
 }
 
-/* .header__button{
-    height: 58.5px;
-    width: 223.3px;
-    border: 2px solid red;
-    border-radius: 200px;
-} */
+   /* RESPONSIVE BEHAVIOR */
+
+
+@media (max-width: 768px) {
+    .header .banner {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .header .navigation {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .header .navigation menu {
+        flex-wrap: wrap;
+    }
+}
+
